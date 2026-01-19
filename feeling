@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Shreeya 💗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 50%, #f48fb1 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 90%;
+            z-index: 10;
+        }
+
+        .main-text {
+            font-size: clamp(2.2rem, 8vw, 5.5rem);
+            font-weight: 700;
+            color: #c2185b;
+            text-shadow: 0 0 20px rgba(194, 24, 91, 0.4);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(194, 24, 91, 0.3); }
+            to   { text-shadow: 0 0 40px rgba(194, 24, 91, 0.7); }
+        }
+
+        .sub-text {
+            font-size: clamp(1.3rem, 5vw, 2.2rem);
+            color: #880e4f;
+            opacity: 0.9;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            font-size: 2.5rem;
+            color: rgba(236, 64, 122, 0.7);
+            pointer-events: none;
+            animation: float 12s infinite linear;
+        }
+
+        .heart:nth-child(odd) { animation-duration: 15s; }
+        .heart:nth-child(3n) { font-size: 3.5rem; animation-duration: 18s; }
+
+        @keyframes float {
+            0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 1; }
+            100% { transform: translateY(-20vh) translateX(30vw) rotate(360deg); opacity: 0; }
+        }
+
+        /* Generate some random hearts positions */
+        .heart1 { left: 10%; animation-delay: 0s; }
+        .heart2 { left: 25%; animation-delay: 3s; }
+        .heart3 { left: 45%; animation-delay: 6s; }
+        .heart4 { left: 65%; animation-delay: 9s; }
+        .heart5 { left: 80%; animation-delay: 1.5s; }
+        .heart6 { left: 15%; animation-delay: 4.5s; bottom: -10%; }
+
+        @media (max-width: 600px) {
+            .main-text { font-size: clamp(2.8rem, 12vw, 4.5rem); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="main-text">DO YOU FEEL WHAT I'M FEELING?</h1>
+        <p class="sub-text">Because my heart has been racing since the moment I met you... 💗</p>
+    </div>
+
+    <!-- Cute floating hearts -->
+    <div class="heart heart1">💗</div>
+    <div class="heart heart2">❤️</div>
+    <div class="heart heart3">💕</div>
+    <div class="heart heart4">💖</div>
+    <div class="heart heart5">✨💞</div>
+    <div class="heart heart6">💓</div>
+
+</body>
+</html>
