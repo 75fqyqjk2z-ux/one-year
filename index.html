@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 1st Anniversary, Shreeya 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+        font-family:'Poppins',sans-serif;
+        background:#fff0f7;
+        color:#4a4a4a;
+        overflow-x:hidden;
+        position:relative;
+        min-height:100vh;
+    }
+    /* Floating hearts from the second code */
+    .heart {
+        position: absolute;
+        font-size: 2.5rem;
+        color: rgba(236, 64, 122, 0.7);
+        pointer-events: none;
+        animation: float 12s infinite linear;
+    }
+    .heart:nth-child(odd) { animation-duration: 15s; }
+    .heart:nth-child(3n) { font-size: 3.5rem; animation-duration: 18s; }
+    @keyframes float {
+        0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-20vh) translateX(30vw) rotate(360deg); opacity: 0; }
+    }
+    .heart1 { left: 10%; animation-delay: 0s; }
+    .heart2 { left: 25%; animation-delay: 3s; }
+    .heart3 { left: 45%; animation-delay: 6s; }
+    .heart4 { left: 65%; animation-delay: 9s; }
+    .heart5 { left: 80%; animation-delay: 1.5s; }
+    .heart6 { left: 15%; animation-delay: 4.5s; bottom: -10%; }
+
+    /* HEADER */
+    header{
+        text-align:center;
+        padding:4rem 1rem;
+        background:#fff6fb;
+    }
+    h1{
+        font-family:'Pacifico',cursive;
+        font-size:3.4rem;
+        color:#ff6fa5;
+    }
+    .subtitle{
+        font-family:'Comic Neue',cursive;
+        font-size:1.5rem;
+        color:#ff5f9e;
+        margin-top:.8rem;
+    }
+    /* SECTIONS */
+    section{
+        max-width:1000px;
+        margin:4rem auto;
+        padding:3rem;
+        background:#ffffff;
+        border-radius:28px;
+        box-shadow:0 15px 40px rgba(255,182,193,.25);
+        opacity:0;
+        transform:translateY(40px);
+        transition:all 1s ease;
+    }
+    section.show{
+        opacity:1;
+        transform:translateY(0);
+    }
+    h2{
+        font-family:'Pacifico',cursive;
+        font-size:2.8rem;
+        color:#ff5f9e;
+        text-align:center;
+        margin-bottom:1.8rem;
+    }
+    p{
+        font-size:1.2rem;
+        text-align:center;
+        line-height:1.8;
+    }
+    /* FOOTER */
+    footer{
+        text-align:center;
+        padding:5rem 1rem 4rem;
+        background:#fff6fb;
+    }
+    .love-note{
+        font-family:'Comic Neue',cursive;
+        font-size:1.7rem;
+        color:#ff4f97;
+        margin-bottom:2.5rem;
+    }
+    /* SECRET MESSAGE */
+    .secret-message{
+        margin-top:2rem;
+        font-family:'Comic Neue',cursive;
+        font-size:1.7rem;
+        color:#ff6fa5;
+        opacity:0;
+        transform:translateY(20px);
+        transition:1s ease;
+    }
+    .secret-message.show{
+        opacity:1;
+        transform:translateY(0);
+    }
+    /* FINAL GLOWING QUESTION (moved here) */
+    .final-question {
+        margin: 5rem auto;
+        max-width: 90%;
+        text-align: center;
+        padding: 4rem 1rem;
+        background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 50%, #f48fb1 100%);
+        border-radius: 30px;
+        box-shadow: 0 20px 60px rgba(194, 24, 91, 0.3);
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1.5s ease;
+    }
+    .final-question.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .main-text {
+        font-size: clamp(2.2rem, 8vw, 5.5rem);
+        font-weight: 700;
+        color: #c2185b;
+        text-shadow: 0 0 20px rgba(194, 24, 91, 0.4);
+        letter-spacing: -1px;
+        animation: glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+        from { text-shadow: 0 0 10px rgba(194, 24, 91, 0.3); }
+        to { text-shadow: 0 0 40px rgba(194, 24, 91, 0.7); }
+    }
+    .sub-text {
+        font-size: clamp(1.3rem, 5vw, 2.2rem);
+        color: #880e4f;
+        opacity: 0.9;
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+    /* TAP GLOW */
+    .tap-glow{
+        position:fixed;
+        width:140px;
+        height:140px;
+        border-radius:50%;
+        pointer-events:none;
+        background:radial-gradient(circle,rgba(255,182,193,.4),transparent 70%);
+        animation:glow .9s ease-out forwards;
+        z-index:999;
+    }
+    @keyframes glow{
+        from{transform:scale(.6);opacity:1}
+        to{transform:scale(1.8);opacity:0}
+    }
+
+    /* ENHANCED MOBILE RESPONSIVENESS */
+    @media(max-width:768px){
+        header{padding:3rem 1rem}
+        h1{font-size:2.4rem;line-height:1.2}
+        .subtitle{font-size:1.2rem;margin-top:.6rem}
+        section{margin:2.5rem 1rem;padding:2rem;border-radius:20px}
+        h2{font-size:2.1rem;margin-bottom:1.5rem}
+        p{font-size:1.05rem;line-height:1.6}
+        .love-note{font-size:1.4rem;margin-bottom:2rem}
+        .secret-message{font-size:1.3rem;margin-top:1.5rem}
+        .final-question{margin:3rem auto;padding:3rem 1rem;border-radius:25px}
+        .tap-glow{width:100px;height:100px}
+        /* Hearts smaller on tablet */
+        .heart{font-size:2rem}
+        .heart:nth-child(3n){font-size:2.8rem}
+    }
+    @media(max-width:480px){
+        body{font-size:14px}
+        header{padding:2rem 0.5rem}
+        h1{font-size:1.8rem}
+        .subtitle{font-size:1rem}
+        section{margin:2rem 0.5rem;padding:1.5rem;border-radius:15px;box-shadow:0 10px 30px rgba(255,182,193,.2)}
+        h2{font-size:1.6rem;margin-bottom:1.2rem}
+        p{font-size:1rem;line-height:1.5;text-align:left}
+        .love-note{font-size:1.2rem}
+        .secret-message{font-size:1.1rem}
+        .final-question{padding:2.5rem 0.5rem;margin:2rem auto}
+        .main-text{font-size:clamp(1.8rem,6vw,3rem)}
+        .sub-text{font-size:clamp(1rem,4vw,1.5rem)}
+        .tap-glow{width:80px;height:80px}
+        /* Hearts even smaller and fewer delays on phone for performance */
+        .heart{font-size:1.5rem;animation-duration:10s}
+        .heart:nth-child(odd){animation-duration:12s}
+        .heart:nth-child(3n){font-size:2rem;animation-duration:14s}
+    }
+</style>
+</head>
+<body>
+    <!-- Floating hearts -->
+    <div class="heart heart1">💗</div>
+    <div class="heart heart2">❤️</div>
+    <div class="heart heart3">💕</div>
+    <div class="heart heart4">💖</div>
+    <div class="heart heart5">✨💞</div>
+    <div class="heart heart6">💓</div>
+
+    <header>
+        <h1>Happy 1st Anniversary, Shreeya 💕</h1>
+        <p class="subtitle">Our magical year of giggles, cuddles & forever moments ♡</p>
+    </header>
+
+    <section>
+        <h2>🌸 Our Cute Beginning</h2>
+        <p>That cozy Mama Frankie evening when the universe whispered, “these two belong together.”</p>
+    </section>
+
+    <section>
+        <h2>✨ Our Mini Adventures</h2>
+        <p>Free ka shawarma, momos, BP to Five Gardens drives, I felt alive with you again. You are the reason I believe that love still exists ♡</p>
+    </section>
+
+    <section>
+        <h2>🌟 Forever & Always</h2>
+        <p>20/20/20 will always remain special for me. You’re my calm, my chaos, my home, today and always. I wanna start a family with you</p>
+    </section>
+
+    <footer>
+        <p class="love-note">Forever your biggest fan & cuddle partner,<br>Reuben 💖</p>
+        
+        <div class="secret-message" id="secretMessage">
+            I choose you. In every lifetime. 🤍
+        </div>
+
+        <!-- The big glowing question appears here as the finale -->
+        <div class="final-question" id="finalQuestion">
+            <h1 class="main-text">DO YOU FEEL WHAT I'M FEELING?</h1>
+            <p class="sub-text">Because my heart has been racing since the moment I met you... 💗</p>
+        </div>
+    </footer>
+
+<script>
+// Scroll reveal for sections
+function reveal(){
+    const sections = document.querySelectorAll('section');
+    const trigger = window.innerHeight * 0.85;
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < trigger) sec.classList.add('show');
+    });
+}
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+// Reveal secret message and final question on scroll (earlier trigger on mobile)
+const secret = document.getElementById('secretMessage');
+const finalQ = document.getElementById('finalQuestion');
+let shown = false;
+const mobileTrigger = window.innerWidth <= 768 ? 0.5 : 0.7;
+
+window.addEventListener('scroll', () => {
+    const secretRect = secret.getBoundingClientRect();
+    if(secretRect.top < window.innerHeight * mobileTrigger && !shown){
+        secret.classList.add('show');
+        shown = true;
+        
+        // Reveal final question shortly after
+        setTimeout(() => {
+            finalQ.classList.add('show');
+        }, 1200);
+    }
+});
+
+// Tap glow effect (smaller on mobile)
+document.addEventListener('click', e => {
+    const isMobile = window.innerWidth <= 768;
+    const size = isMobile ? 40 : 70;
+    const g = document.createElement('div');
+    g.className = 'tap-glow';
+    g.style.left = e.clientX - size + 'px';
+    g.style.top = e.clientY - size + 'px';
+    document.body.appendChild(g);
+    setTimeout(() => g.remove(), 900);
+});
+</script>
+</body>
+</html>
